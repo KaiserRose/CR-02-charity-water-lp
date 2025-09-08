@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<<html lang="en">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,25 +15,43 @@
 
   <!-- Header -->
   <header>
-    <img src="https://www.charitywater.org/assets/branding/logo-charity-water.svg" alt="Logo">
-    <nav>
-      <a href="#">Take Action</a>
-      <a href="#">About Us</a>
-      <a href="#">Impact</a>
-      <a href="#" class="cta">Join The Spring</a>
-    </nav>
+    <!-- 
+      The logo is on the top left.
+      The navigation links are on the right.
+      This uses simple HTML and CSS (no flex or grid).
+    -->
+    <div class="header-container">
+      <!-- Logo on the left -->
+      <img src="charitywater_logo_horizontal_BlackText.png" alt="Charity Water Logo" class="logo">
+      <!-- Navigation on the right -->
+      <nav>
+        <a href="#">Take Action</a>
+        <a href="#">About Us</a>
+        <a href="#">Impact</a>
+        <a href="#" class="cta">Join The Spring</a>
+      </nav>
+    </div>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
-    <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?ixlib=rb-4.0.3&q=80&auto=format&fit=crop&w=800" alt="Students giving clean water">
-    <div class="hero-content">
-      <h1>Skip a coffee, give clean water.</h1>
-      <p>Join thousands of students making an impact together. 100% of your gift funds clean water projects.</p>
-      <div class="hero-buttons">
-        <a href="#" class="button-main">Give $5</a>
-        <a href="#" class="button-main">Join Monthly</a>
-        <a href="#" class="button-secondary">Learn More</a>
+    <!-- 
+      We use a simple container to hold the image and the content side by side.
+      The image is on the left, and the text/buttons are on the right.
+      We use only basic CSS (no flex or grid).
+    -->
+    <div class="hero-container">
+      <!-- Image on the left -->
+      <img src="4996_Ethiopia_2019_CG-.jpg" alt="Group of smiling students in Ethiopia gather around a water pump, joyfully collecting clean water in a sunny outdoor setting" class="hero-img">
+      <!-- Content on the right -->
+      <div class="hero-content">
+        <h1>Skip a coffee, give clean water.</h1>
+        <p>Join thousands of students making an impact together. 100% of your gift funds clean water projects.</p>
+        <div class="hero-buttons">
+          <a href="#" class="button-main">Give $5</a>
+          <a href="#" class="button-main">Join Monthly</a>
+          <a href="#" class="button-secondary">Learn More</a>
+        </div>
       </div>
     </div>
   </section>

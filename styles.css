@@ -8,25 +8,64 @@ body {
 
 /* Header with navigation */
 header {
-  /* Use padding and text-align for layout instead of flex */
   background-color: white;
   padding: 15px 20px;
   text-align: left;
+  /* Added min-height to give the header more height and balance space */
+  min-height: 80px;
+  /* Added vertical alignment for content */
+  line-height: 80px;
+}
+
+/* Header container for logo and nav */
+.header-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  /* Use overflow: hidden to contain floats */
+  overflow: hidden;
+  padding: 15px 0 0 0;
+}
+
+/* Header row: logo and header text side by side */
+.header-row {
+  /* Add padding for space around content */
+  padding: 10px 0;
+  /* Use text-align left to keep logo on the left */
+  text-align: left;
+  /* Set a max width and center the row in the page */
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 /* Logo image in header */
 header img {
-  height: 30px;
+  max-width: 220px; /* controls logo size */
+  height: auto;     /* keeps the image's shape */
   vertical-align: middle;
+  margin-bottom: 0; /* removed extra margin */
+  /* Added margin-right to give space between logo and nav */
+  margin-right: 30px;
+  /* Aligns the logo with the nav links */
+  display: inline-block;
 }
 
-/* Navigation links */
-nav {
-  margin-top: 10px;
+/* Logo on the left */
+.logo {
+  float: left;
+  width: 180px;
+  height: auto;
+  margin-top: 2px;
 }
 
-nav a {
-  margin-right: 15px;
+/* Navigation on the right */
+.header-container nav {
+  float: right;
+  margin-top: 18px;
+}
+
+.header-container nav a {
+  margin-left: 18px;
   text-decoration: none;
   font-weight: bold;
   color: #222;
@@ -40,11 +79,74 @@ nav a.cta {
   border-radius: 5px;
 }
 
+/* Header text centered below logo/nav */
+.header-text {
+  display: none;
+}
+
 /* Hero section */
+/* Increased top and bottom padding to move the yellow background up and cover more space */
 .hero {
   background-color: #fff7e6; /* light yellow */
-  padding: 30px 10px;
+  padding: 60px 10px 60px 10px; /* more space above and below */
   text-align: center;
+  margin-top: 0; /* ensure it sits right under the header */
+}
+
+/* Hero section container for image and content */
+.hero-container {
+  /* This makes the image and content appear side by side */
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  /* Use overflow: hidden to contain floats */
+  overflow: hidden;
+  text-align: left; /* Align text to the left for the content */
+  background-color: #fff7e6; /* keep the background color */
+  padding: 40px 10px 40px 10px; /* more space above and below */
+}
+
+/* Hero image on the left */
+.hero-img {
+  float: left;
+  width: 48%; /* Take up about half the space */
+  max-width: 380px;
+  height: auto;
+  margin-right: 3%;
+  border-radius: 8px;
+}
+
+/* Hero content on the right */
+.hero-content {
+  float: left;
+  width: 49%; /* Take up the rest of the space */
+  box-sizing: border-box;
+  padding-top: 10px;
+}
+
+/* Make sure the hero section background covers the whole area */
+.hero {
+  background-color: #fff7e6;
+  margin-top: 0;
+  padding: 0;
+}
+
+/* Responsive: stack image and content on small screens */
+@media (max-width: 700px) {
+  .hero-container {
+    padding: 20px 5px;
+  }
+  .hero-img,
+  .hero-content {
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .hero-content {
+    padding-top: 20px;
+  }
 }
 
 /* Hero image */
